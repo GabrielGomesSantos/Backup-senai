@@ -1,0 +1,88 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+}
+
+header {
+    text-align: center;
+    padding: 10px;
+    background-color: #f2f2f2;
+}
+
+nav {
+    margin: 10px 0;
+}
+
+nav a {
+    margin-right: 15px;
+    text-decoration: none;
+}
+
+section {
+    margin: 20px 0;
+}
+
+footer {
+    text-align: center;
+    padding: 10px;
+    background-color: #f2f2f2;
+}
+
+
+
+.listContainer {
+    display: flex;
+    justify-content: space-around; /* ou 'space-between' */
+    align-items: flex-start; /* Alinha no início do eixo transversal (vertical) */
+}
+
+
+.alinhamento {
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+}
+
+
+
+
+.orderlist {
+    display: flex;
+    justify-content: space-between; /* ou 'space-between' */
+
+}
+
+.gtr1 {
+    display: flex;
+    justify-content: space-around;
+    font-size: 50px;
+}
+
+.gtr {
+    font-size: 50px;
+}
+
+.vl {
+    font-size: 50px;
+}
+
+.descricao-guitarra {
+    font-size: 25px;
+    color: #333;
+}
+
+.espc {
+    font-size: 25px;
+}
+
+.vl1 {
+    display: flex;
+    justify-content: space-around;
+    font-size: 50px;
+}
+
+.descricao-violao {
+    font-size: 25px;
+    color: #333;
+}
+

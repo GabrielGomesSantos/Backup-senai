@@ -1,0 +1,181 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+.nav-bar {
+    width: 100%;
+    height: 100px;
+    background-color: #fce938;
+}
+
+.superior {
+    display: flex;
+    align-items: center;
+}
+
+.superior > .logo {
+    margin-right: 20px; /* Adicione uma margem à direita para separar a logo da caixa de pesquisa */
+}
+
+.superior .pesquisa {
+    flex-grow: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center; /* Centraliza verticalmente o conteúdo da caixa de pesquisa */
+}
+.superior .pesquisa form {
+    display: flex;
+    align-items: center;
+}
+
+.superior .pesquisa label {
+    display: none; /* Oculta a label, pois você não a está utilizando diretamente */
+}
+
+.superior .pesquisa input {
+    padding: 12px; /* Adiciona um preenchimento interno para a caixa de pesquisa */
+    font-size: 16px; /* Aumenta o tamanho da fonte */
+    height: 40px; /* Aumenta a altura da caixa de pesquisa */
+    width: 580px;
+    border: 1px solid #ccc; /* Adiciona uma borda */
+    border-radius: 5px; /* Adiciona cantos arredondados */
+    margin-right: 8px; /* Adiciona uma margem à direita para separar o campo de pesquisa do botão */
+    position: relative;
+}
+
+/* Estilização para a barra de pesquisa na navegação */
+.nav-search {
+    right: 45px; /* Posiciona a barra de pesquisa 45 pixels à direita */
+    max-width: 720px; /* Define a largura máxima da barra de pesquisa */
+    display: flex;
+    width: 100%;
+    height: 100%;
+    justify-content: center; /* Centraliza os itens horizontalmente */
+    align-items: center; /* Centraliza os itens verticalmente */
+    padding: 0px;
+    position: relative;
+    overflow: visible;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+
+
+
+/* Estilização para o input de pesquisa na barra de navegação */
+input[type=text].nav-search-input, input[type=search].nav-search-input {
+    display: flex;
+    position: relative;
+
+    /* Estilização da fonte */
+    font-size: 16px;
+    border-radius: 4px;
+
+    /* Estilização das cores */
+    color: #333;
+    box-shadow: 0 1px 2px 0 rgba(0,0,0,.2);
+    background-color: #fff;
+
+    /* Estilização da posição e tamanho */
+    margin: 0;
+    height: 40px;
+    width: 100%;
+    padding: 10px 60px 10px 15px;
+
+}
+
+/* Estilização para o botão de pesquisa na barra de navegação */
+button.nav-search-btn, button.nav-search-btn:focus {
+    position: absolute;
+    padding: 0;
+    background: none;
+    font-size: 22px;
+    line-height: 1em;
+    width: 46px;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    left: auto;
+    height: 40px;
+    cursor: pointer;
+    background-color: rgba(0,0,0,0);
+    box-shadow: none;
+}
+
+button.nav-search-btn:before, button.nav-search-btn:focus:before {
+    content: "";
+    display: block;
+    height: 26px;
+    border-left: 1px solid #e6e6e6;
+    position: absolute;
+    top: 6.5px;
+}
+
+.superior .pesquisa button {
+    padding: 8px 16px; /* Adiciona preenchimento interno para o botão */
+    color: #fff; /* Cor do texto */
+    border: none; /* Remove a borda */
+    border-radius: 20px; /* Adiciona cantos arredondados */
+    cursor: pointer; /* Adiciona um cursor indicando que é um botão clicável */
+    right: 20px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.nav-menu {
+ font-size: 15px;
+}
+
+.nav-menu ul {
+    display: flex;
+    justify-content: space-around;
+    list-style: none;
+    font-family: Arial;
+}
+
+
+.nav-menu-list a{ 
+    font-size: 15px;
+    color: black;
+    text-decoration: none;
+}
