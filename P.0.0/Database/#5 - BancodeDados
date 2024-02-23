@@ -1,0 +1,86 @@
+import os
+import sqlite3
+from time import sleep
+
+conn =sqlite3.connect('Database\cliente.db')
+cursor = conn.cursor()
+
+cursor.execute('''          
+CREATE TABLE IF NOT EXISTS usuarios ( 
+        id INTEGER PRIMARY KEY,
+        nome TEXT NOT NULL,
+        idade INTEGER NOT NULL
+    )
+''')
+
+def inserir():
+    os.system('cls')
+    name = input("Digite o nome: ")
+    idade = int(input("idade: "))
+
+    cursor.execute("INSERT INTO usuarios (nome, idade) VALUES (?, ?)", (name, idade))
+    conn.commit
+
+def listar():
+    os.system('cls')
+    cursor.execute("SELECT * FROM usuarios")
+    registros = cursor.fetchall()
+
+    for item in registros:
+         print(f"ID: {item[0]}, Nome: {item[1]}, Idade: {item[2]}")
+
+    input("Aperte qualquer tecla para voltar ao menu....")     
+
+def deletar():
+        id_de_remocao = int(input("Qual o ID do usuario que você deseja deletar: "))
+        cursor.execute(f"DELETE FROM usuarios WHERE  id = {id_de_remocao}")
+        conn.commit
+
+def atualizar():
+
+    id_de_remocao = int(input("Digite o id para a remoção"))
+    novoNome = input("Digite o novo nome: ")
+    novaIdade = int(input("Digite a nova idade: "))
+    cursor.execute(f"UPDATE usuarios SET nome = '{novoNome}', idade='{novaIdade}' WHERE id ={id_de_remocao}")
+    conn.commit
+
+def menu():
+    print("-----Bancos de Dados 1-----")
+    print("\n1) Listar Usuarios\n2) Inserir novo usuario\n3) Deletar usuario\n4) Atualizador dados\n\n9) Sair")
+    print("--------------------------")
+
+    return int(input("Opção: "))
+
+opc = 1
+
+while opc != 0:
+    os.system('cls')
+    opc = menu()
+
+    match opc:
+         
+        case 1:
+            listar()
+
+        case 2:
+            inserir()
+
+        case 3:
+            deletar()      
+
+        case 4:
+            atualizar() 
+
+        case 9:
+            os.system('cls')
+            print("Desligando...")
+            sleep(0.7)
+            os.system('cls')
+            opc = 0 
+            break
+
+        case _:
+            pass
+
+conn.commit()
+conn.close
